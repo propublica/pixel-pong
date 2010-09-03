@@ -1,0 +1,5 @@
+*.log
+config/database.yml
+config/deploy.rb
+config/*.json
+Capfile
