@@ -27,8 +27,7 @@
   
     pixel-ping.#{Rails.env}.json
   
-  Once you have filled out the details you can run rake pixel:track to start an
-  instance of Pixel Ping. After Pixel Ping starts, boot this app and start
-  collecting stats.
+  Once you have filled out the details, boot this app, and run rake pixel:track to
+  start an instance of Pixel Ping.
   
   
