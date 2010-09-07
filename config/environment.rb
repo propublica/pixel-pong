@@ -8,7 +8,7 @@ Rails::Initializer.run do |config|
   config.gem "curb", :lib => "curl"
   config.gem "jammit"
   config.time_zone = 'Eastern Time (US & Canada)'
- 
+
 end
 PIXEL_CONFIG = JSON.parse(File.read("#{Rails.root}/config/pixel-ping.#{Rails.env}.json")).symbolize_keys
 PIXEL_SECRET = PIXEL_CONFIG[:secret]

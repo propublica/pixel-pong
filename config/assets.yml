@@ -1,4 +1,5 @@
 embed_assets: on
+javascript_compressor: closure
 
 javascripts:
   all:

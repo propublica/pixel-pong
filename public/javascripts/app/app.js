@@ -1,4 +1,4 @@
-(function($){
+(function(){
   _.extend(pixelpong.app, { 
     VERSION : '0.2.1', // update on commit
     live : [],
@@ -20,8 +20,8 @@
       return window.pp_initialized = true;
     }
   });
-})(jQuery);
+})();
 
-jQuery(document).ready(function($){
+$(document).ready(function(){
   pixelpong.app.initialize();
 });

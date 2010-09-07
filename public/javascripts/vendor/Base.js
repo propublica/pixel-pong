@@ -3,7 +3,7 @@
 (function(){
   var initializing = false, fnTest = /xyz/.test(function(){xyz;}) ? /\b_super\b/ : /.*/;
   // The base Base implementation (does nothing)
-  this.Base = function(){};
+  window["Base"] = this.Base = function(){};
   
   // Create a new Base that inherits from this Base
   Base.extend = function(prop) {
