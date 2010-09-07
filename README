@@ -17,7 +17,7 @@
   
   http://github.com/documentcloud/pixel-ping
   
-  == Guided Tour
+  == Getting Started
   
   First you should install the with-tracking-js branch of Pixel Ping via rake:
   
@@ -30,4 +30,5 @@
   Once you have filled out the details you can run rake pixel:track to start an
   instance of Pixel Ping. After Pixel Ping starts, boot this app and start
   collecting stats.
+  
   
