@@ -1,0 +1,15 @@
+html { background:#ebecec; }
+body { font-family:Georgia,serif; }
+a { color:#2262CC;text-decoration:none; }
+a:hover { text-decoration:underline; }
+h1 { text-rendering: optimizeLegibility; }
+.wrapper { margin:0 auto;width:960px; }
+#content { background:#fff;clear:both;padding:0 0 130px; }
+    #content .wrapper { height:1%;overflow:hidden; }
+    #content h1 { font-size:34px;margin-bottom:10px; }
+
+/* sortable table */
+.sortable { font-family:"Helvetica Neue",Arial,sans-serif;border-left:1px solid #c3c3c3;border-top:1px solid #c3c3c3;margin:20px 0 0 1px;width:100% }
+    .sortable th { background-color:#d1dce9;border-bottom:2px solid #c3c3c3;border-right:1px solid #c3c3c3;font-size:14px;padding:6px 25px 6px 10px;text-align:left; vertical-align: middle; cursor: pointer; }
+    .sortable td { border-bottom:1px solid #c3c3c3;border-right:1px solid #c3c3c3;font-size:12px;padding:6px 10px; }
+    .sortable a { text-decoration:none; }

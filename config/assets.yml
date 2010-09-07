@@ -12,5 +12,9 @@ javascripts:
 
 
 stylesheets:
-  all: 
-    - public/stylesheets/*.css
+  all:
+    - public/stylesheets/reset.css
+    - public/stylesheets/reset-text.css
+    - public/stylesheets/master.css
+    - public/stylesheets/application.css
+    

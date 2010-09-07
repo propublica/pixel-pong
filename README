@@ -27,7 +27,22 @@
   
     pixel-ping.#{Rails.env}.json
   
+  For example you can use this for development:
+  
+  {
+    "port":     "9187",
+    "host":     "127.0.0.1",
+    "interval": 5,
+    "endpoint": "http://127.0.0.1:3000/stats.json",
+    "secret":   "one very good secret"
+  }
+  
+  and save it in config/pixel-ping.development.json.
+  
   Once you have filled out the details, boot this app, and run rake pixel:track to
   start an instance of Pixel Ping.
+  
+  After collecting a few stats you can go to the administration interface to view
+  stats by day. (Screenshot: http://bit.ly/pixel-ping-admin)
   
   
