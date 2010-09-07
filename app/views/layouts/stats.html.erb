@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="http://www.propublica.org/css/960/reset.css" type="text/css" media="all" charset="utf-8" />
+	<link rel="stylesheet" href="http://www.propublica.org/css/960/propublica-text.css" type="text/css" media="all" charset="utf-8" />
+  <link rel="stylesheet" href="http://www.propublica.org/css/master.css" type="text/css" media="screen" charset="utf-8" />
+	<link rel="stylesheet" href="http://www.propublica.org/css/print.css" type="text/css" media="print" charset="utf-8" />
+	<%= include_stylesheets :all %>
+  <%= include_javascripts :all %>
+<title>Pixel Ping - ProPublica</title>
+</head>
+<body>
+  <div id="content">
+    <div class="wrapper">
+      <h1>
+        Pixel Ping
+      </h1>
+      <div id="toolbar">
+        <a class="button" id="get_dates"><b class="o"><b class="m"><b>Get Dates</b></b></b></a>
+        <div class="dates">
+          <label for="from">From: </label><input id="from" value="<%= @today.to_date %>">
+          <label for="from">To: </label><input id="to" value="<%= @today.to_date %>">
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>

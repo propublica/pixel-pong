@@ -1,0 +1,86 @@
+body{ font-family: arial;  background-color:#fff;}
+html{ background-color: white;}
+h1{ height: 26px; padding: 10px 0px;  text-align: right;}
+div.wrapper{overflow-y:visible; overflow-x:visible; padding: 0 10px;}
+table.sortable { -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 3px 0px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 3px 0px; padding: 10px; border:1px; margin: 10px 0px;}
+  table.sortable th {background-image:none; border:none; cursor:inherit;}
+  table.sortable td{ border: none; }
+  table.sortable tr:nth-child(2n){background-color:#f5f9fc;}
+  table.sortable tr {background-color:white}
+  td.title div, td.url div {width: 400px; overflow: hidden; text-overflow: ellipsis;}
+    .shorten {white-space: nowrap; }
+  .hits, th.hits { text-align: right; padding-right: 10px; }
+  
+.toolbar {}  
+.dates { width: 385px; float:right;height: 1%; overflow:hidden; }
+  input#from, input#to {width: 150px; font-size:12px; margin:0px 0 12px; padding-left: 3px; border: 1px solid #999; height:22px; border-radius: 2px; }
+  input {color: #999;}
+  input:focus {color: #222;}
+/* from http://somadesign.ca/demos/buttons.html */
+a.button {
+  float: right;
+
+	text-decoration: none;
+	border-color:rgba(0, 0, 0, 0.75);
+	cursor: pointer;
+	outline: none;
+	color:#111;
+	font-family:Arial;
+	display:inline-block;
+	vertical-align:top;
+	position:relative;
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	background-color:#aaa;
+	background: #aaa -moz-linear-gradient(top, rgba(255,255,255,.75), rgba(255,255,255,.25));
+	background: #aaa -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,.75)), to(rgba(255,255,255,.25)));
+	text-shadow:1px 1px 0 rgba(255,255,255,.67);
+	line-height:24px;
+	height:24px;
+	margin:0 0 12px 0px;
+	width:75px;
+	padding:0;
+	/** Make the text unselectable **/
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+a.button, a.button:after, a.button:before, button, button:after, button:before {
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border-width:1px;
+	border-style:solid;
+}
+a.button:after, a.button:before, button:after, button:before {
+	display:block;
+	position:absolute;
+	content:' ';
+}
+a.button:before, button:before {
+	border-color: #FFF rgba(255,255,255,.10) rgba(255,255,255,.10);
+	left:0;
+	top:0;
+	width:73px;
+	height:22px;
+}
+a.button:after, button:after {
+	border-color: transparent transparent rgba(255, 255, 255, 0.63);
+	left:-1px;
+	bottom:-2px;
+	height:100%;
+	width:100%;
+}
+a.button:hover, a.button:focus {
+	background-image:-moz-linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,0.2));
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,.9)), to(rgba(255,255,255,0.2)));
+}
+a.button:active, button:active, input[type=submit]:active {
+	background-image:-moz-linear-gradient(top, rgba(75,75,75,.4), rgba(255,255,255,.4));
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(75,75,75,.4)), to(rgba(255,255,255,.4)));
+	line-height:26px;
+}
+a.button:active:before, button:active:before {
+	border-color: rgba(255, 255, 255, 0.11) rgba(255, 255, 255, 0.23) rgba(255, 255, 255, 0.27);
+}

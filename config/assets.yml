@@ -1,0 +1,16 @@
+embed_assets: on
+
+javascripts:
+  all:
+    - public/javascripts/vendor/*.js
+    - public/javascripts/*.js
+    - public/javascripts/app/app.js
+    - public/javascripts/lib/*.js
+    - public/javascripts/app/models/*.js
+    - public/javascripts/app/views/*.js
+    - public/javascripts/app/templates/*.jst
+
+
+stylesheets:
+  all: 
+    - public/stylesheets/*.css

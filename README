@@ -1,9 +1,10 @@
 =
-   ___ _         _   ___ _           
-  | _ (_)_ _____| | | _ (_)_ _  __ _ 
-  |  _/ \ \ / -_) | |  _/ | ' \/ _` |
-  |_| |_/_\_\___|_| |_| |_|_||_\__, |
-                               |___/
+      ____  _            __   ____                   
+     / __ \(_)_  _____  / /  / __ \____  ____  ____ _
+    / /_/ / /| |/_/ _ \/ /  / /_/ / __ \/ __ \/ __ `/
+   / ____/ /_>  </  __/ /  / ____/ /_/ / / / / /_/ / 
+  /_/   /_//_/|_|\___/_/  /_/    \____/_/ /_/\__, /  
+                                            /____/
 
   o      .   _______ _______
    \_ 0     /______//______/|   @_o
@@ -11,9 +12,10 @@
     | \    |      ||      |     / |
   
   
-  pixeltracker is the reference implementation for the Pixel Ping stats collector.
-  It's written in rails 2.3.8 and is useful when you need to get up and running
-  quickly.
+  Pixel Pong is the reference implementation for the Pixel Ping stats collector.
+  See Pixel Ping:
+  
+  http://github.com/documentcloud/pixel-ping
   
   == Guided Tour
   
@@ -24,8 +26,8 @@
   Pixel Ping's configuration files are stored in:
   
     pixel-ping.#{Rails.env}.json
-
+  
   Once you have filled out the details you can run rake pixel:track to start an
-  instance of Pixel Ping. After Pixel Ping starts boot this app and start collecting
-  stats.
+  instance of Pixel Ping. After Pixel Ping starts, boot this app and start
+  collecting stats.
   

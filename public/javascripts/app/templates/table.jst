@@ -1,0 +1,18 @@
+<table class="sortable">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>URL</th>
+      <th class="hits">Hits (<%= total %>)</th>
+    </tr>
+  </thead>
+  <tbody>
+<% _.each(stats, function(item){ %>
+  <tr>
+    <td class="title"><div><span class="shorten"><%= item.stat.title %></span></div></td>
+    <td class="url"><div><a class="shorten" href="<%= item.stat.url %>"><%= item.stat.url %></a></div></td>
+    <td class="hits"><%= item.stat.hits %></td>
+  </tr>
+<% }); %>
+  </tbody>
+</table>
