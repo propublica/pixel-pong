@@ -1,0 +1,3 @@
+[submodule "vendor/pixel-ping"]
+	path = vendor/pixel-ping
+	url = git@github.com:documentcloud/pixel-ping.git

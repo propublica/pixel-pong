@@ -12,16 +12,16 @@
     | \    |      ||      |     / |
   
   
-  Pixel Pong is the reference implementation for the Pixel Ping stats collector.
+  Pixel Pong is a backend for the Pixel Ping stats collector.
   See Pixel Ping:
   
   http://github.com/documentcloud/pixel-ping
   
   == Guided Tour
   
-  First you should install Pixel Ping via npm:
+  First you should install the with-tracking-js branch of Pixel Ping via rake:
   
-    npm install pixel-ping
+    rake pixel:install
   
   Pixel Ping's configuration files are stored in:
   
