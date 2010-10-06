@@ -7,6 +7,7 @@ Rails::Initializer.run do |config|
 
   config.gem "curb", :lib => "curl"
   config.gem "jammit"
+  config.gem "nokogiri"
   config.time_zone = 'Eastern Time (US & Canada)'
 
 end

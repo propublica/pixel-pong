@@ -3,8 +3,9 @@ require 'test_helper'
 class SearchControllerTest < ActionController::TestCase
   should "return url hit counts" do
     stat = Factory :stat
-    get :index, 'url' => Stat.first.url, 'callback' => 'test', :format => "json"
+    time = Time.now.to_i
+    get :index, 'url' => Stat.first.url, 'callback' => "test#{time}", :format => "json"
     assert_response :success
-    assert_equal @response.body, "test(#{Stat.aggregate.first(:conditions => { :url => stat.url}).to_json});"
+    assert_equal @response.body, "test#{time}(#{Stat.aggregate.first(:conditions => { :url => stat.url}).to_json});"
   end
 end

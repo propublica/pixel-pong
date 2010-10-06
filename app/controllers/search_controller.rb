@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
-  JS_CLEANER = /[^$_\w]/
+  JS_CLEANER = /[^$_\w\d]/
   def index
     render :status => 404 and return unless params[:url] && params[:callback]
     @conditions = ["#{@conditions.first} and url = :url", @conditions.last.merge({
