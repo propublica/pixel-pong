@@ -4,23 +4,27 @@ class Stat < ActiveRecord::Base
   validate :url_format 
   named_scope :aggregate, :order => "hits DESC", :select => ["sum(hits) as hits, url, title"], :group => :url
   
+  
+  def title=(t)
+    write_attribute :title, HTML::FullSanitizer.new.sanitize(t) 
+  end
+  
   def title
-    t = read_attribute(:title)
+    t = read_attribute :title
     if t.nil?
       begin
         req = Curl::Easy.new(url)
         req.perform
-        title = Nokogiri::HTML.parse(req.body_str).css('title').text
-        write_attribute(:title, title)
+        self.title = Nokogiri::HTML.parse(req.body_str).css('title').text
       # catch bad urls
       rescue Curl::Err::HostResolutionError 
-        write_attribute(:title, "Inaccessible URL")
+        self.title = "Inaccessible URL"
       ensure
         save
       end
     end
-    write_attribute(:title, "No Title") if read_attribute(:title).blank?
-    read_attribute(:title)
+    self.title = "No Title" if read_attribute(:title).blank?
+    read_attribute :title
   end
   
   private

@@ -16,7 +16,7 @@
   See Pixel Ping:
   
   http://github.com/documentcloud/pixel-ping
-  
+    
   == Getting Started
   
   First you should install the with-tracking-js branch of Pixel Ping via rake:

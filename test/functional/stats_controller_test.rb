@@ -1,12 +1,12 @@
 require 'test_helper'
 
 class StatsControllerTest < ActionController::TestCase
-  test "should get index" do
+  should "get index" do
     get :index
     assert_response :success
   end
 
-  test "should create stat" do
+  should "create stat" do
     assert_difference('Stat.count', 2) do
       post :create, :json => { 
         "http://www.propublica.org/pages/about.html" => 276, 

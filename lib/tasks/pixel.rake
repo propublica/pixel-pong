@@ -4,7 +4,11 @@ namespace :pixel do
   task :track do
     if File.exists? PID_FILE
       pid = File.read PID_FILE
-      Process.kill("USR1", pid.to_i)
+      begin
+        Process.kill("USR1", pid.to_i)
+      rescue
+        puts "No matching process."
+      end
     end
     launch_command = "pixel-ping #{Rails.root}/config/pixel-ping.#{Rails.env}.json"
     sh "nohup #{launch_command} > log/pixel_ping.log 2>&1 & echo $! > #{PID_FILE}"
