@@ -6,6 +6,8 @@ namespace :pixel do
       pid = File.read PID_FILE
       begin
         Process.kill("USR1", pid.to_i)
+        sleep 1
+        Process.kill("INT", pid.to_i)
       rescue
         puts "No matching process."
       end
