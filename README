@@ -12,7 +12,9 @@
     | \    |      ||      |     / |
   
   
-  Pixel Pong is a backend for the Pixel Ping stats collector.
+  Pixel Pong is a backend and web admin interface for the Pixel Ping stats 
+  collector.
+  
   See Pixel Ping:
   
   http://github.com/documentcloud/pixel-ping
@@ -39,10 +41,10 @@
   
   and save it in config/pixel-ping.development.json.
   
-  Once you have filled out the details, boot this app, and run rake pixel:track to
-  start an instance of Pixel Ping.
+  Once you have filled out the details, boot this app, and run rake pixel:track 
+  to start an instance of Pixel Ping.
   
-  After collecting a few stats you can go to the administration interface to view
-  stats by day. (Screenshot: http://bit.ly/pixel-ping-admin)
+  After collecting a few stats you can go to the administration interface to 
+  view stats by day. (Screenshot: http://bit.ly/pixel-ping-admin)
   
   
