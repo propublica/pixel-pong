@@ -30,7 +30,7 @@ class StatTest < ActiveSupport::TestCase
     
     should "parse out the title from composite urls" do
       Stat.track({ 
-        "Title☃http://www.propublica.org/pages/about.html" => 276, 
+        "Title|pixel-ping-break|http://www.propublica.org/pages/about.html" => 276, 
       }.to_json, PIXEL_SECRET)
       assert_equal "Title", Stat.last.title
     end

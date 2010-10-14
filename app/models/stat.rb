@@ -37,7 +37,6 @@ class Stat < ActiveRecord::Base
     when u.host.nil? then errors.add(:url, "no host")
     end
   rescue URI::BadURIError, URI::InvalidURIError
-    p "bad uri"
     errors.add(:url, "bad url")
   end
   
