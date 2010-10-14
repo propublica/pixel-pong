@@ -1,3 +1,4 @@
+$KCODE = 'UTF-8'
 class Stat < ActiveRecord::Base 
   validates_presence_of :url, :hits
   validate_on_create :log_hits?
@@ -36,6 +37,7 @@ class Stat < ActiveRecord::Base
     when u.host.nil? then errors.add(:url, "no host")
     end
   rescue URI::BadURIError, URI::InvalidURIError
+    p "bad uri"
     errors.add(:url, "bad url")
   end
   
@@ -63,8 +65,8 @@ class Stat < ActiveRecord::Base
     raw_stats = JSON.parse(json)
     if secret == PIXEL_SECRET
       raw_stats.each do |component, hits|
-        if component.include? "☃"
-          bits = component.split "☃"
+        if component.include? "|pixel-ping-break|"
+          bits = component.split "|pixel-ping-break|"
           title = bits.shift
           url = bits.pop
         else
