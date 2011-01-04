@@ -8,6 +8,7 @@ Rails::Initializer.run do |config|
   config.gem "curb", :lib => "curl"
   config.gem "jammit"
   config.gem "nokogiri"
+  config.gem "delayed_job", :version => '~>2.0.5'
   config.time_zone = 'Eastern Time (US & Canada)'
 
 end
