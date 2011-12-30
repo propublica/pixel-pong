@@ -6,14 +6,14 @@ class ApplicationController < ActionController::Base
   before_filter :timeframe
   
   def timeframe
-    @today = Date.today.to_time.utc
+    @today = Time.zone.today
     @conditions = ["created_at > :start_date and created_at <= :end_date", {
-      :start_date => @today, 
-      :end_date   => @today + 1.day
+      :start_date => @today.beginning_of_day.utc, 
+      :end_date   => @today.end_of_day.utc
     }]
     @conditions = ["created_at > :start_date and created_at <= :end_date", {
-      :start_date => Time.parse(params[:start_date]).to_date.to_time.utc, 
-      :end_date   => Time.parse(params[:end_date]).to_date.to_time.utc + 1.day
+      :start_date => Time.parse(params[:start_date]).to_date.beginning_of_day.utc, 
+      :end_date   => Time.parse(params[:end_date]).to_date.end_of_day.utc
     }] if params[:start_date] && params[:end_date]
   end
   # Scrub sensitive parameters from your log
